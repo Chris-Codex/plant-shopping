@@ -4,6 +4,20 @@ import COLORS from "./../const/colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 const Home = () => {
+  const categories = ["POPULAR", "ORGANIC", "INDOORS", "SYNTHETIC"];
+
+  const CategoryList = () => {
+    return (
+      <View style={styles.categoryContainer}>
+        {categories.map((item, index) => (
+          <Text key={index} style={[styles.categoryText]}>
+            {item}
+          </Text>
+        ))}
+      </View>
+    );
+  };
+
   return (
     <SafeAreaView
       style={{ flex: 1, paddingHorizontal: 5, backgroundColor: COLORS.white }}
@@ -35,6 +49,9 @@ const Home = () => {
         <View style={styles.sortBtn}>
           <Icon name="sort" size={28} color={COLORS.white} />
         </View>
+      </View>
+      <View style={styles.catList}>
+        <CategoryList />
       </View>
     </SafeAreaView>
   );
@@ -81,6 +98,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginLeft: 10,
+  },
+
+  categoryContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: -510,
   },
 });
 
