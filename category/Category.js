@@ -8,7 +8,11 @@ const CategoryList = () => {
   return (
     <View style={styles.categoryContainer}>
       {categories.map((item, index) => (
-        <TouchableOpacity key={index} onPress={() => setCatIndex(index)}>
+        <TouchableOpacity
+          key={index}
+          onPress={() => setCatIndex(index)}
+          activeOpacity={0.8}
+        >
           <Text
             key={index}
             style={[

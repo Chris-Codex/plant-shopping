@@ -1,16 +1,8 @@
 import React from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
-import COLORS from "../const/colors";
+import { Text, View, StyleSheet, SafeAreaView, TextInput } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import CategoryList from "../category/Category";
-import HomeProduct from "./HomeProduct";
+import HomeProduct from "../home/HomeProduct";
+import CategoryList from "../../category/Category";
 
 const Home = () => {
   return (
@@ -21,18 +13,13 @@ const Home = () => {
           <Text style={styles.welcomeText2}>Plant Shopper</Text>
         </View>
         <View style={styles.sortBtn}>
-          <Icon name="shopping-cart" size={30} color={COLORS.primary} />
+          <Icon name="shopping-cart" size={30} />
         </View>
       </View>
 
       <View style={styles.searchContainer}>
         <View style={styles.searchInputContainer}>
-          <Icon
-            name="search"
-            style={styles.icon}
-            size={30}
-            color={COLORS.primary}
-          />
+          <Icon name="search" style={styles.icon} size={30} />
           <TextInput placeholder="Search" style={styles.searchInput} />
         </View>
         <View style={styles.searchBtn}>
@@ -65,7 +52,6 @@ const styles = StyleSheet.create({
   searchContainer: {
     flexDirection: "row",
     marginTop: 20,
-    backgroundColor: COLORS.grey,
   },
 
   searchInputContainer: {
@@ -85,7 +71,6 @@ const styles = StyleSheet.create({
   welcomeText2: {
     fontSize: 32,
     fontWeight: "bold",
-    color: COLORS.green,
   },
 
   sortBtn: {

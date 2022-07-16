@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import Home from "./screenDisplay/Home";
+import Home from "./screenDisplay/home/Home";
 
 export default function App() {
   return (
