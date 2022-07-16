@@ -31,6 +31,10 @@ const Home = () => {
           />
           <TextInput placeholder="search" />
         </View>
+
+        <View style={styles.sortBtn}>
+          <Icon name="sort" size={28} color={COLORS.white} />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -63,9 +67,20 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     backgroundColor: COLORS.light,
-    borderRadius: 30,
+    borderRadius: 15,
     height: 50,
-    marginBottom: 550,
+    marginBottom: 530,
+    alignItems: "center",
+  },
+
+  sortBtn: {
+    backgroundColor: COLORS.green,
+    borderRadius: 15,
+    height: 50,
+    width: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: 10,
   },
 });
 
