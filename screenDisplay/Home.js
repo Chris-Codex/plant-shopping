@@ -10,6 +10,7 @@ import {
 import COLORS from "../const/colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import CategoryList from "../category/Category";
+import HomeProduct from "./HomeProduct";
 
 const Home = () => {
   return (
@@ -41,6 +42,10 @@ const Home = () => {
 
       <View style={styles.categoryContainer}>
         <CategoryList />
+      </View>
+
+      <View style={styles.productContainer}>
+        <HomeProduct />
       </View>
     </SafeAreaView>
   );

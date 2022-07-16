@@ -8,7 +8,7 @@ const CategoryList = () => {
   return (
     <View style={styles.categoryContainer}>
       {categories.map((item, index) => (
-        <TouchableOpacity>
+        <TouchableOpacity key={index} onPress={() => setCatIndex(index)}>
           <Text
             key={index}
             style={[
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   categoryContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 10,
+    marginTop: 20,
   },
 
   categoryText: {
